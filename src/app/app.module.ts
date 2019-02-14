@@ -11,9 +11,7 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerComponent,
-    CustomerDetailsComponent,
-    AddCustomerComponent
+    CustomerComponent
   ],
   imports: [
     BrowserModule,
