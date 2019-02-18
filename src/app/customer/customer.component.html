@@ -2,3 +2,6 @@
 <div *ngFor="let cust of customers">
   <a [routerLink]="['/customers', cust.id]" style="color:black"><span class="badge badge-dark">{{cust.id}}</span> -> {{ cust.firstname }}</a>
 </div>
+<router-outlet></router-outlet>
+
+

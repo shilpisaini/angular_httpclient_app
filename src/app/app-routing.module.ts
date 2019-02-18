@@ -6,11 +6,11 @@ import { CustomerComponent } from './customer/customer.component';
 const routes: Routes = [
    { 
      path: 'customers', 
-     component: CustomerComponent 
-   },
-   { 
-     path: 'customer/add', 
-     loadChildren: './add-customer/add-customer.module#AddCustomerModule',
+     component: CustomerComponent ,
+     children: [
+      { path: '', redirectTo: 'customers', pathMatch: 'full' },
+      { path: 'add', loadChildren: './add-customer/add-customer.module#AddCustomerModule'},
+     ]
    },
    { 
      path: 'customers/:id', 
@@ -20,7 +20,7 @@ const routes: Routes = [
      path: '', 
      redirectTo: 'customers', 
      pathMatch: 'full'
-   }, 
+   }
 ];
  
 @NgModule({
